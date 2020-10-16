@@ -5,29 +5,26 @@ class Stack():
     def __init__(self):
         self.items = array('i',[4,3,2,4072])
 
-    def end(self, item):
+  def end(self, item):
         self.items.append(item)
         print(item)
 
-    def peek(self):
+   def peek(self):
         if self.items:
             return self.items[-1]
         else:
             return None
 
-    def size(self):
+   def size(self):
         if self.items:
             return len(self.items)
         else:
             return None
-
     def display(self):
         for i in self.items:
             print(i)
-
     def start(self, i):
         self.items.insert(0, i)
-
     def search(self, a):
         l = self.items
         for i in l:
@@ -36,17 +33,14 @@ class Stack():
                 break
         else:
             print("not found")
-
     def traverse(self):
         a = []
         l = self.items
         for i in l:
             a.append(i)
         print(a)
-
     def shoting_element(self):
-        
-        nums=self.items
+             nums=self.items
         def sort(nums):
             for i in range(len(nums) - 1, 0, -1):
                 for j in range(i):
@@ -55,7 +49,7 @@ class Stack():
                         nums[j] = nums[j + 1]
                         nums[j + 1] = temp
 
-        sort(nums)
+   sort(nums)
         print(nums)
     def reverse(self):
         l=self.items
@@ -63,11 +57,11 @@ class Stack():
 
 class merge1(Stack):
  
-    def __init__(self):
+  def __init__(self):
         Stack.__init__(self)
         self.items1 = array('i',[4,3,2,1,6])
 
-    def merge(self):
+   def merge(self):
         l = self.items
         l1=self.items1
         a=(l+l1)
